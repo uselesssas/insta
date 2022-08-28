@@ -19,6 +19,10 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Authentication
 gem 'devise'
 
+# Files attachments
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
+
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end

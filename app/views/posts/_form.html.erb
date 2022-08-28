@@ -1,0 +1,5 @@
+<%= form_with model: @post, multipart: true do |f| %>
+  <%= f.text_field :description %>
+  <%= f.file_field :images, multiple: true %>
+  <%= f.submit %>
+<% end %>
