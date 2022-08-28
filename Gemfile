@@ -16,6 +16,9 @@ gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
+# Authentication
+gem 'devise'
+
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
