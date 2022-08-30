@@ -23,6 +23,9 @@ gem 'devise'
 gem 'carrierwave', '~> 2.0'
 gem 'image_processing', '~> 1.2'
 
+# Pagination
+gem 'pagy', '~> 5.10'
+
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'ffaker'

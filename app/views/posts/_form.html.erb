@@ -1,5 +1,13 @@
-<%= form_with model: @post, multipart: true do |f| %>
-  <%= f.text_field :description %>
+<%= form_with model: @post do |f| %>
+  <%= f.text_field :description, placeholder: :description %>
+  <% @post.errors.full_messages_for(:description).each do |msg| %>
+    <%= msg %>
+  <% end %>
+
   <%= f.file_field :images, multiple: true %>
+  <% @post.errors.full_messages_for(:images).each do |msg| %>
+    <%= msg %>
+  <% end %>
+
   <%= f.submit %>
 <% end %>
