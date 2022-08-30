@@ -1,1 +1,5 @@
+<% @post.errors.full_messages_for(:images).each do |msg| %>
+  <%= msg %>
+<% end %>
+
 <%= render 'form' %>

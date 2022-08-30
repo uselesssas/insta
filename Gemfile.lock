@@ -189,7 +189,7 @@ GEM
       railties (>= 5.0)
     ruby-vips (2.1.4)
       ffi (~> 1.12)
-    ssrf_filter (1.0.8)
+    ssrf_filter (1.1.0)
     stimulus-rails (1.1.0)
       railties (>= 6.0.0)
     strscan (3.0.4)
@@ -223,9 +223,9 @@ DEPENDENCIES
   debug
   devise
   ffaker
+  image_processing (~> 1.2)
   jbuilder
   jsbundling-rails
-  mini_magick
   pg (~> 1.1)
   propshaft
   puma (~> 5.0)

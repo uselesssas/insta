@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.build(post_params)
 
     if @post.save
-      redirect_to @post
+      redirect_to @post, notice: 'Post was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -25,7 +25,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.find(params[:id])
     @post.destroy
 
-    redirect_to root_path, status: :see_other
+    redirect_to root_path, status: :see_other, notice: 'Post was successfully destroyed.'
   end
 
   private
