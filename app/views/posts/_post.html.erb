@@ -1,9 +1,9 @@
 <%= post.user.username %>
 <%= post.description %>
-<%= link_to 'DELETE', post_path(post), data: { turbo_method: :delete } %>
+<%= link_to 'Delete', post_path(post), data: { turbo_method: :delete } %>
 
 <% if post.images? %>
-  <% post.images.each do |i| %>
-    <%= image_tag i.thumb.url, size: '470x587' %>
+  <% post.images.each do |img| %>
+    <%= image_tag img.thumb.url, size: '470x587' %>
   <% end %>
 <% end %>

@@ -3,10 +3,10 @@
 <% @posts.each do |p| %>
   <%= p.user.username %>
   <%= p.description %>
-  <%= link_to 'DELETE', post_path(p), data: { turbo_method: :delete } %>
+  <%= link_to 'Delete', post_path(p), data: { turbo_method: :delete } %>
   <% if p.images? %>
-    <% p.images.each do |i| %>
-      <%= link_to image_tag(i.thumb.url, size: '470x587'), post_path(p) %>
+    <% p.images.each do |img| %>
+      <%= link_to image_tag(img.thumb.url, size: '470x587'), post_path(p) %>
     <% end %>
   <% end %>
 <% end %>

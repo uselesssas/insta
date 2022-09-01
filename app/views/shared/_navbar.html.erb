@@ -1,6 +1,6 @@
 <%= current_user.email %>
 <%= current_user.username %>
-<%= link_to 'root_path', root_path %>
-<%= link_to 'new_post_path', new_post_path %>
-<%= link_to 'EXIT', destroy_user_session_path, data: { turbo_method: :delete } %>
+<%= link_to 'Home', root_path %>
+<%= link_to 'New post', new_post_path %>
+<%= link_to 'Exit', destroy_user_session_path, data: { turbo_method: :delete } %>
 <hr>
