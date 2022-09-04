@@ -1,1 +1,6 @@
-User.create(email: 'test@mail.com', username: 'test', password: '123123', password_confirmation: '123123')
+2.times do |i|
+  @user = User.create(email: "test#{i}@gmail.com",
+                      username: "test#{i}",
+                      password: "test#{i}@gmail.com",
+                      password_confirmation: "test#{i}@gmail.com")
+end

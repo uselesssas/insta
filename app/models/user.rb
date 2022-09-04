@@ -4,6 +4,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :username, presence: true, length: { in: 3..25 }, uniqueness: { case_sensitive: false }
 end
