@@ -5,4 +5,5 @@ class Post < ApplicationRecord
   has_many :comments, dependent: :destroy
 
   validates :images, presence: true
+  validates :description, length: { maximum: 2200 }
 end
