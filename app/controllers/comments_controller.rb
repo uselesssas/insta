@@ -7,14 +7,15 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to root_path
     else
-      redirect_to root_path, notice: 'Comment has not successfully created.'
+      redirect_to root_path, status: :unprocessable_entity
     end
   end
 
   def destroy
     @comment = current_user.comments.find(params[:id])
     @comment.destroy
-    redirect_to root_path
+
+    redirect_to root_path, status: :see_other
   end
 
   private
