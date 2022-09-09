@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @pagy, @posts = pagy(Post.includes(:user, :comments), items: 2)
+    @pagy, @posts = pagy(Post.includes(:user, :comments, :likes), items: 2)
   end
 
   def show

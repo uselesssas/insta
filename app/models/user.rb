@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   validates :username, length: { in: 3..25 }, uniqueness: { case_sensitive: false }
   # First character must be a letter
