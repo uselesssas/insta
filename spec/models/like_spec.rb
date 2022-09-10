@@ -7,7 +7,7 @@ RSpec.describe Like, type: :model do
   end
 
   context 'validations :user_id :post_id' do
-    # subject { build(:like) }
-    # it { should validate_uniqueness_of(:user_id).scoped_to(:post_id) }
+    subject { build(:like) }
+    it { should validate_uniqueness_of(:user_id).scoped_to(:post_id) }
   end
 end
