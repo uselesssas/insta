@@ -23,13 +23,18 @@ gem 'devise'
 
 # Files attachments
 gem 'carrierwave', '~> 2.0'
+# Image processing
 gem 'image_processing', '~> 1.2'
 
 # Pagination
 gem 'pagy', '~> 5.10'
 
 group :development, :test do
-  gem 'debug', platforms: %i[mri mingw x64_mingw]
+  # Debugging
+  gem 'pry-byebug'
+  gem 'pry-rails'
+
+  # Generate fake data
   gem 'ffaker'
 end
 
