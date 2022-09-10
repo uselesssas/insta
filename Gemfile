@@ -34,6 +34,12 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
 
+  # Testing
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers', '~> 5.0'
+
   # Generate fake data
   gem 'ffaker'
 end
