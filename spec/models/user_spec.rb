@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'schema' do
-    context 'column' do
+    describe 'column' do
       it { should have_db_column(:id).of_type(:integer).with_options(primary: true, null: false) }
       it { should have_db_column(:email).of_type(:string).with_options(default: '', null: false) }
       it { should have_db_column(:encrypted_password).of_type(:string).with_options(default: '', null: false) }
@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
       it { should have_db_column(:username).of_type(:string).with_options(default: '', null: false) }
     end
 
-    context 'index' do
+    describe 'index' do
       it { should have_db_index(:email).unique(true) }
       it { should have_db_index(:reset_password_token).unique(true) }
       it { should have_db_index(:username).unique(true) }
@@ -28,7 +28,7 @@ RSpec.describe User, type: :model do
   end
 
   describe 'validations' do
-    context ':username' do
+    describe ':username' do
       it { should validate_length_of(:username).is_at_least(3).is_at_most(25) }
       it { should validate_uniqueness_of(:username).case_insensitive }
     end

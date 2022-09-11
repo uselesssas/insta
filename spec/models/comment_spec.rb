@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
   describe 'schema' do
-    context 'column' do
+    describe 'column' do
       it { should have_db_column(:id).of_type(:integer).with_options(primary: true, null: false) }
       it { should have_db_column(:user_id).of_type(:integer).with_options(null: false) }
       it { should have_db_column(:post_id).of_type(:integer).with_options(null: false) }
@@ -11,7 +11,7 @@ RSpec.describe Comment, type: :model do
       it { should have_db_column(:updated_at).of_type(:datetime).with_options(precision: 6, null: false) }
     end
 
-    context 'index' do
+    describe 'index' do
       it { should have_db_index(:post_id) }
       it { should have_db_index(:user_id) }
     end
@@ -23,7 +23,7 @@ RSpec.describe Comment, type: :model do
   end
 
   describe 'validations' do
-    context ':body' do
+    describe ':body' do
       it { should validate_length_of(:body).is_at_least(2).is_at_most(1000) }
     end
   end
