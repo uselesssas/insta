@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Post, type: :model do
   context 'schema' do
     it { should have_db_column(:id).of_type(:integer).with_options(primary: true, null: false) }
-    it { should have_db_column(:user_id).of_type(:integer) }
+    it { should have_db_column(:user_id).of_type(:integer).with_options(null: false) }
     it { should have_db_column(:description).of_type(:text) }
     it { should have_db_column(:images).of_type(:json) }
     it { should have_db_column(:created_at).of_type(:datetime).with_options(precision: 6, null: false) }
