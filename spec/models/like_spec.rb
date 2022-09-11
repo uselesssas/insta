@@ -19,8 +19,7 @@ RSpec.describe Like, type: :model do
   end
 
   context 'validations :user_id :post_id' do
-    # FactoryBot does not create a post because of the images field
-    # subject { build(:like) }
-    # it { should validate_uniqueness_of(:user_id).scoped_to(:post_id) }
+    subject { build(:like) }
+    it { should validate_uniqueness_of(:user_id).scoped_to(:post_id) }
   end
 end
